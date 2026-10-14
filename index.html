@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakwan Crispy - UMKM ADE ANDRI YUANDA</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">🥕 Bakwan<span>Crispy</span></div>
+    <nav>
+      <a href="#beranda">Beranda</a>
+      <a href="#produk">Produk</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="beranda">
+    <div class="hero-text">
+      <p class="label">PRODUK UMKM LOKAL</p>
+      <h1>Bakwan Renyah,<br>
+        <span>Rasa Bikin Nagih!</span>
+      </h1>
+      <p>
+        Bakwan sayur gurih dan renyah, dibuat dari
+        bahan pilihan. Cocok untuk teman santai
+        bersama keluarga.
+      </p>
+      <a href="#produk" class="btn">Lihat Produk</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="Assets/bakwan.jpg" alt="Bakwan sayur renyah">
+    </div>
+  </section>
+
+  <section class="produk" id="produk">
+    <p class="label">MENU FAVORIT</p>
+    <h2>Produk Kami</h2>
+    <p class="subjudul">Camilan sederhana dengan rasa istimewa.</p>
+
+    <div class="produk-container">
+      <div class="card">
+       <img src="Assets/bakwan1.jpg" alt="Bakwan sayur"> 
+        <div class="card-body">
+          <h3>Bakwan Sayur</h3>
+          <p>Gurih, renyah, dengan sayuran segar.</p>
+          <h4>Rp2.000 / buah</h4>
+          <button onclick="pesan('Bakwan Sayur')">
+            Pesan Sekarang
+          </button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="Assets/bakwan3.jpg" alt="Bakwan paket hemat">
+        <div class="card-body">
+          <h3>Paket Hemat</h3>
+          <p>Bakwan untuk dinikmati bersama teman.</p>
+          <h4>Rp10.000 / 5 buah</h4>
+          <button onclick="pesan('Paket Hemat')">
+            Pesan Sekarang
+          </button>
+        </div>
+      </div>
+
+      <div class="card">
+          <div class="card-body">
+        <img src="Assets/bakwan4.jpg" alt="Bakwan dengan sambal">            
+          <h3>Bakwan Sambal</h3>
+          <p>Bakwan renyah dengan sambal pedas.</p>
+          <h4>Rp3.000 / porsi</h4>
+          <button onclick="pesan('Bakwan Sambal')">
+            Pesan Sekarang
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tentang" id="tentang">
+    <h2>Tentang UMKM Kami</h2>
+    <p>
+      Bakwan Crispy adalah usaha kuliner lokal yang
+      menyediakan camilan bakwan sayur dengan rasa
+      gurih dan harga terjangkau. Kami ingin mendukung
+      UMKM lokal melalui produk yang enak dan berkualitas.
+    </p>
+  </section>
+  
+<title>Kontak UMKM Bakwan Goreng</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff5e9;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 30px auto;
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #00000015;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #e96b2c;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #777;
+            line-height: 1.6;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: Arial, sans-serif;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #e96b2c;
+        }
+
+        textarea {
+            height: 130px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #e96b2c;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #c9501b;
+        }
+
+        .info-kontak {
+            margin-top: 30px;
+            padding: 20px;
+            background: #fff0df;
+            border-radius: 10px;
+        }
+
+        .info-kontak h2 {
+            color: #e96b2c;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .info-kontak p {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .kembali {
+            display: block;
+            text-align: center;
+            margin-top: 25px;
+            color: #e96b2c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .kembali:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #888;
+            font-size: 13px;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 12px;
+            }
+
+            .container {
+                padding: 22px;
+                margin: 15px auto;
+            }
+
+            .header h1 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>📞 Hubungi Kami</h1>
+
+            <p>
+                UMKM Bakwan goreng<br>
+                Gurih, Renyah, dan Lezat!
+            </p>
+        </div>
+
+        <form id="formKontak">
+
+            <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+
+                <input
+                    type="text"
+                    id="nama"
+                    placeholder="Masukkan nama lengkap"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="email">Alamat Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Masukkan alamat email"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="pesan">Pesan</label>
+
+                <textarea
+                    id="pesan"
+                    placeholder="Tuliskan pesan atau pesanan kamu..."
+                    required
+                ></textarea>
+            </div>
+
+            <button type="submit">
+                Kirim Pesan via WhatsApp
+            </button>
+
+        </form>
+
+        <div class="info-kontak">
+            <h2>Informasi Kontak</h2>
+
+            <p>📍 Alamat: JL.PSR 1 BARAT</p>
+
+            <p>📱 WhatsApp: 0812-3456-7890</p>
+
+            <p>📧 Email: bakwangoreng@gmail.com</p>
+        </div>
+
+        <a href="index.html" class="kembali">
+            ← Kembali ke Beranda
+        </a>
+
+
+    </div>
+
+    <script>
+        const form = document.getElementById("formKontak");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const nama =
+                document.getElementById("nama").value;
+
+            const email =
+                document.getElementById("email").value;
+
+            const pesan =
+                document.getElementById("pesan").value;
+
+            // Ganti dengan nomor WhatsApp penjual
+            const nomorWhatsApp = "6281234567890";
+
+            const isiPesan =
+                "Halo UMKM Bakso Goreng!\n\n" +
+                "Nama: " + nama + "\n" +
+                "Email: " + email + "\n" +
+                "Pesan: " + pesan;
+
+            const link =
+                "https://wa.me/" + nomorWhatsApp +
+                "?text=" + encodeURIComponent(isiPesan);
+
+            window.open(link, "_blank");
+        });
+    </script>
+
+</body>
+</html>
+  
+  
+
+  <section class="kontak" id="kontak">
+    <h2>Yuk, Pesan Bakwan!</h2>
+    <p>Nikmati bakwan hangat untuk menemani harimu.</p>
+    <button onclick="pesan('Bakwan Crispy')">
+      Hubungi Kami
+    </button>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Bakwan Crispy | UMKM Andri</p>
+  </footer>
+
+  <script src="JS/script.js"></script>
+</body>
+</html>
